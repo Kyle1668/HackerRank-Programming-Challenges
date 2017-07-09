@@ -25,10 +25,24 @@ def array_left_rotation(a, n, k):
     for count in range(0, k):
         temp = a[0]
         for index in range(0, n - 1):
+            print("ran")
             a[index] = a[index + 1]
         a[len(a) - 1] = temp
 
     return a
+
+
+# Recursive Approach
+# def array_left_rotation(a, n, k):
+#     if k > 0:
+#         shifted_array = []
+#         original_first = a[0]
+#         for index in range(1, n):
+#             shifted_array.append(a[index])
+#         shifted_array.append(original_first)
+#         return array_left_rotation(shifted_array, n, k - 1)
+#     else:
+#         return a
 
 
 def main():
@@ -39,4 +53,3 @@ def main():
 
 
 main()
-
